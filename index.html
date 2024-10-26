@@ -5,14 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Filter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Staatliches&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./src/output.css">
 </head>
 
-<body class=" bg-blue-200 min-h-screen">
-    <h1 class="text-center  font-mono text-5xl  uppercase font-bold p-16 tracking-tighter">Buscador de autos</h1>
+<body class=" min-h-screen bg-gradient-to-r from-blue-500 to-teal-500">
+    <h1 class="text-center font-staatliches text-6xl  uppercase font-bold p-16 ">Buscador de autos</h1>
     <div class="max-w-7xl mx-auto p-10 bg-white">
         <form>
-            <div class="flex flex-col space-y-2">
+            <div class="flex flex-col space-y-6">
                 <div class="flex flex-col md:flex-row gap-6  ">
                     <div class="flex flex-col flex-1">
                         <label class="font-bold mb-1" for="Marca">Marca</label>
@@ -27,8 +32,8 @@
                         </select>
                     </div>
                     <div class="flex flex-col flex-1">
-                        <label class="font-bold mb-1 "for="year">Año</label>
-                        <select class="flex justify-center px-4 py-2 rounded-md border border-slate-300" id=" year">
+                        <label class="font-bold mb-1 " for="year">Año</label>
+                        <select class="flex justify-center px-4 py-2 rounded-md border border-slate-300" id="year">
                             <option value="">Seleccione</option>
                         </select>
                     </div>
@@ -72,7 +77,8 @@
                     </div>
                     <div class="flex flex-col flex-1">
                         <label class="font-bold mb-1" for="transmision">Transmisión</label>
-                        <select class="flex justify-center px-4 py-2 rounded-md border border-slate-300" id="transmision">
+                        <select class="flex justify-center px-4 py-2 rounded-md border border-slate-300"
+                            id="transmision">
                             <option value="">Seleccione</option>
                             <option value="automatico">Automática</option>
                             <option value="manual">Manual</option>
@@ -91,10 +97,12 @@
                 </div>
             </div>
         </form>
-        <h1 class="text-center  font-mono text-5xl  uppercase font-bold p-16 tracking-tighter">Resultados</h1>
-        <div class="resultados">
+        <h1 class="text-center  font-staatliches text-6xl  uppercase font-bold pb-5 mt-48">Resultados</h1>
+        <div id="resultado">
         </div>
     </div>
+    <script src="/js/db.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

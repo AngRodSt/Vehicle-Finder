@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./index.html","./js/**/*js"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'staatliches': ['Staatliches', 'cursive'],
+      },
+    },
   },
   plugins: [],
 }
