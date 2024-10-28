@@ -35,13 +35,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 
 //EventListener
-marca = document.addEventListener('change', fillSearch);
-year = document.addEventListener('change', fillSearch);
-minimo = document.addEventListener('change', fillSearch);
-maximo = document.addEventListener('change', fillSearch);
-puertas = document.addEventListener('change', fillSearch);
-transmision = document.addEventListener('change', fillSearch);
-color = document.addEventListener('change', fillSearch);
+marca.addEventListener('change', fillSearch);
+year.addEventListener('change', fillSearch);
+minimo.addEventListener('change', fillSearch);
+maximo.addEventListener('change', fillSearch);
+puertas.addEventListener('change', fillSearch);
+transmision.addEventListener('change', fillSearch);
+color.addEventListener('change', fillSearch);
 
 
 //Functions
@@ -53,11 +53,9 @@ function fillSearch(e){
 }
 function filterSearch(){
     const resultados = autos.filter(filterBrand).filter(filterYear).filter(filterMin).filter(filterMax).filter(filterDoors).filter(filterTransmition).filter(filterColor);
-    console.log(resultados)
     clearHTML();
     if(resultados.length){
         loadCars(resultados);
-        console.log('here');
         return;
     };
     noResult();
